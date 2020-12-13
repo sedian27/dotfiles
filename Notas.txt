@@ -1,0 +1,20 @@
+#Enlazar vim:
+cd bin
+sudo ln -s nvim vim
+#PROGRAMAS QUE USO
+neovim
+Visual Studio code 
+Dbeaver
+#SQL SERVER:
+yay -S mssql-server msodbcsql mssql-tools
+sudo /opt/mssql/bin/mssql-conf setup
+sudo systemctl start/stop mssql-server
+azuredatastudio
+ranger - thunar
+pulseaudio - alsa
+spotify
+lxappearance
+jdownloader2
+openvpn
+yay -S protonvpn-cli-ng
+bluez-utils
