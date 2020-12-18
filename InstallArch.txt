@@ -41,7 +41,7 @@ arch-chroot /mnt
 ln -sf /usr/share/zoneinfo/America/Lima /etc/localtime #Usar tab
 hwclock --systohc
 pacman -S nano
-nano /etc/locale.gen  # Buscar en_US.UTF-8 UTF-8 y es_ES.UTF-8 UTF-8
+nano /etc/locale.gen  # Buscar en_US.UTF-8 UTF-8 y es_PE.UTF-8 UTF-8
 locale-gen
 echo "LANG=es_PE.UTF-8" > /etc/locale.conf
 echo "KEYMAP=la-latin1" > /etc/vconsole.conf
@@ -69,12 +69,20 @@ umount -R /mnt
 shutdown now
 # Sacar USB y arrancar PC
 
-
-
 nmcli device wifi list
 nmcli device wifi connect NOMBRE password CONTRASEÑA
 ping archlinux.org
 sudo pacman -S xorg
+
+#Para instalar yay
+sudo pacman -S base-devel git
+cd /opt/
+sudo git clone https://aur.archlinux.org/yay-git.git
+sudo chown -R username:username yay-git/
+cd yay-git
+makepkg -si
+
+
 # Instalar Entorno de Escritorio KDE-Plasma
 sudo pacman -S plasma-meta kde-applications-meta
 sudo systemctl enable sddm
@@ -86,11 +94,3 @@ reboot
 #Para instalar el firmware que falta:
     yay -S wd719x-firmware aic94xx-firmware
 
-#Para instalar yay
-
-sudo pacman -S base-devel git
-cd /opt/
-sudo git clone https://aur.archlinux.org/yay-git.git
-sudo chown -R username:username yay-git/
-cd yay-git
-makepkg -si

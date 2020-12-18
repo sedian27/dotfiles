@@ -84,7 +84,6 @@ primary_widgets = [
     widget.Clock(**base(fg='light'), format='%d/%m/%Y - %H:%M '),
 
     #powerline('dark', 'color2'),
-    widget.Battery(**base(fg='light'), format='{percent:2.0%}', charge_char='ﮣ', low_foreground='#FF0000'),
 
     widget.Systray(background=colors['dark'], padding=5),
 
@@ -94,7 +93,6 @@ primary_widgets = [
 
 secondary_widgets = [
     *workspaces(),
-
     
     separator(),
 
