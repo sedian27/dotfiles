@@ -64,10 +64,6 @@ primary_widgets = [
     
     widget.Pacman(**base(fg='light'), update_interval=1800),
 
-    separator(),
-    icon(fg="light", text=' '), # Icon: nf-fa-download
-    widget.Volume(**base(fg='light'), get_volume_command='amixer'),
-
     #powerline('color3', 'color4'),
 
     #icon(bg="color3", text=' '),  # Icon: nf-fa-feed
